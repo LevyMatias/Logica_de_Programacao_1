@@ -1,63 +1,79 @@
 <meta charset="UTF-8">
 <h3>Calculo de IMC</h3>
-<p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado 
-    pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
+<p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado
+  pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.
 </p>
 <h4>Tabela IMC</h4>
 
 <table>
-    <tr>
-      <th>IMC</th>
-      <th>Classificação</th>
-      <th>Grau Obesidade</th>
-    </tr>
-    <tr>
-      <td>Menor que 18,5</td>
-      <td align="center">Magreza</td>
-      <td align="center">0</td>
-    </tr>
-    <tr>
-      <td>Entre 18,5 e 24,9</td>
-      <td align="center">Normal</td>
-      <td align="center">0</td>
-    </tr>
-    <tr>
-      <td>Entre 25,0 e 29,9</td>
-      <td align="center">Sobrepeso</td>
-      <td align="center">1</td>
-    </tr>
-    <tr>
-      <td>Entre 30,0 e 39,9</td>
-      <td align="center">Obesidade</td>
-      <td align="center">2</td>
-    </tr>
-    <tr>
-      <td>Maior que 40,0</td>
-      <td align="center">Obesidade Grave</td>
-      <td align="center">3</td>
-    </tr>
-  </table>
+  <tr>
+    <th>IMC</th>
+    <th>Classificação</th>
+    <th>Grau Obesidade</th>
+  </tr>
+  <tr>
+    <td>Menor que 18,5</td>
+    <td align="center">Magreza</td>
+    <td align="center">0</td>
+  </tr>
+  <tr>
+    <td>Entre 18,5 e 24,9</td>
+    <td align="center">Normal</td>
+    <td align="center">0</td>
+  </tr>
+  <tr>
+    <td>Entre 25,0 e 29,9</td>
+    <td align="center">Sobrepeso</td>
+    <td align="center">1</td>
+  </tr>
+  <tr>
+    <td>Entre 30,0 e 39,9</td>
+    <td align="center">Obesidade</td>
+    <td align="center">2</td>
+  </tr>
+  <tr>
+    <td>Maior que 40,0</td>
+    <td align="center">Obesidade Grave</td>
+    <td align="center">3</td>
+  </tr>
+</table>
 
 <script>
-    var meuPeso = 59;
-    var altura = 1.78;
+  var meuPeso = 59;
+  var altura = 1.78;
 
-    function pulaLinha(){
-        document.write("<br><hr><br>");
-    }
-    function escreva(frase){
-        document.write(frase);
-    }
-    function calculaImc(altura, peso) {
-        var imc = peso / (altura * altura);
-        return imc;
-    }  
-    pulaLinha();
-    var nome = prompt("Informe seu nome: ");
-    var altura = prompt("Informe sua altura: ");
-    var peso = prompt("Informe ser peso: ");
-    var imc = calculaImc(altura, peso);
+  function pulaLinha() {
+    document.write("<br><hr><br>");
+  }
+  function escreva(frase) {
+    document.write(frase);
+  }
+  function calculaImc(altura, peso) {
+    var imc = peso / (altura * altura);
+    return imc;
+  }
+  pulaLinha();
+  var nome = prompt("Informe seu nome: ");
+  var altura = prompt("Informe sua altura: ");
+  var peso = prompt("Informe seu peso: ");
+  var imc = calculaImc(altura, peso);
 
-    document.write(nome + ", o calculo do seu IMC é: " + imc.toFixed(2));
-    pulaLinha();
-</script>   
+  document.write(nome + ", o calculo do seu IMC é: " + imc.toFixed(2));
+  pulaLinha();
+
+  if (imc < 18.5) {
+    escreva("Voce esta abaixo do peso recomendado!");
+  }
+  if (imc >= 18.5 && imc <= 24.9) {
+    escreva("Voce esta na faixa de peso recomendado!");
+  }
+  if (imc >= 25 && imc <= 29.9) {
+    escreva("Voce esta acima do peso recomendado!");
+  }
+  if (imc >= 30 && imc <= 39.9) {
+    escreva("Voce esta no 2° grau de obesidade!");
+  }
+  if(imc > 40) {
+    escreva("Voce esta com obesidade elevada, considerada grave!");
+  }
+</script>
