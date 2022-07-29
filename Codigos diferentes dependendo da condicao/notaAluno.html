@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>Boletim do Aluno</h1>
+<h3>Para passar de ano, o aluno precisa de uma nota maior ou igual a 6.</h3>
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function escreva(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var nota1 = parseInt(prompt("Informe sua primeira nota: "));
+    var nota2 = parseInt(prompt("Informe sua segunda nota: "));
+    var nota3 = parseInt(prompt("Informe sua terceira nota: "));
+    var nota4 = parseInt(prompt("Informe sua quarta nota: "));
+    var mediaNotas = (nota1 + nota2 + nota3 + nota4) / 4;
+
+    escreva("Sua nota final foi: " + mediaNotas);
+
+    if (mediaNotas >= 6) {
+        escreva("Passou de ano. Parabéns!!");
+    }
+    if (mediaNotas < 6) {
+        escreva("Voçe ficou de reforço!");
+    }
+</script>

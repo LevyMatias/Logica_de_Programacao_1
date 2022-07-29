@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br><br>");
+    }
+
+    function escreva(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    var jogosConcluidos = parseInt(prompt("Quantos jogos voce zerou: "));
+    var jogosAndamento = parseInt(prompt("Quantos jogos voce não terminou: "));
+    var totalJogos = jogosConcluidos + jogosAndamento;
+    escreva("O total de jogos que voce jogou é: " + totalJogos);
+    
+</script>

@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<h3>Problemas das gerações!</h3>
+<script>
+    var anoAtual = 2022;
+    var anoMilQuinhentos = 1500;
+    var mediaGeracoes = 28;
+    var qntdGeracoes = (anoAtual - anoMilQuinhentos) / mediaGeracoes;
+
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+    function escreva(frase){
+        document.write(frase);
+    }
+
+    escreva("Quantas gerações passaram desde 1500?")
+    pulaLinha();
+    escreva("Resposta: " + Math.round(qntdGeracoes));
+</script>   
