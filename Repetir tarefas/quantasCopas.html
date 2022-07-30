@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h3>EM QUAIS ANOS TEVE COPA DO MUNDO?</h3>
+
+<script>
+  function pulaLinha() {
+    document.write("<br><hr><br>");
+  }
+  function escreva(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+  function quantasCopas(){
+    var anoAtual = parseInt(prompt("Entre com o ano atual: "));
+    var anoDeInicioCopa = 1930;
+    while(anoDeInicioCopa <= anoAtual){
+        escreva("TEVE COPA EM: "+ anoDeInicioCopa);
+        anoDeInicioCopa = anoDeInicioCopa + 4;
+    }
+  }
+  pulaLinha();
+  quantasCopas();
+  escreva("Até mais!");
+</script>
