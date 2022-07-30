@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h3>Descubrir o Número</h3>
+
+<script>
+  var meuPeso = 59;
+  var altura = 1.78;
+
+  function pulaLinha() {
+    document.write("<br><hr><br>");
+  }
+  function escreva(frase) {
+    document.write(frase);
+  }
+  function numeroAleatorio(num){
+    var n = Math.random().toFixed(1) * 10;
+    if(num == n){
+        escreva("Voce acertou o numero!!");
+    }
+    else {
+        escreva("Não acertou! aperte f5 para tentar novamente!");
+    }
+    return n;
+  }
+  pulaLinha();
+  var random = numeroAleatorio(prompt("Chute um numero entre 0 e 10: "));
+</script>
