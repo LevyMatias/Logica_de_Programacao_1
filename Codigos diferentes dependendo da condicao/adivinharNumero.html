@@ -12,15 +12,21 @@
     document.write(frase);
   }
   function numeroAleatorio(num){
-    var n = Math.random().toFixed(1) * 10;
+    var n = Math.round(Math.random() * num);
     if(num == n){
-        escreva("Voce acertou o numero!!");
+        escreva("Voce acertou o numero!! ");
+        pulaLinha();
+        escreva("Era exatamente o "+ n);
     }
     else {
         escreva("Não acertou! aperte f5 para tentar novamente!");
+        pulaLinha();
+        escreva("O número era: "+ n);
     }
-    return n;
   }
   pulaLinha();
-  var random = numeroAleatorio(prompt("Chute um numero entre 0 e 10: "));
+    var random = numeroAleatorio
+    (
+        prompt("Chute um numero: ")
+    );
 </script>
