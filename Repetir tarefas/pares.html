@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<h2>Pares de 0 a 100</h2>
+<script>
+    function pulaLinha() {
+        document.write("<br><hr><br>");
+    }
+
+    function escreva(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var par = 0;
+    while(par <= 100) {
+        escreva(par);
+        par = par + 2;
+    }
+    escreva("FIM");
+</script>
