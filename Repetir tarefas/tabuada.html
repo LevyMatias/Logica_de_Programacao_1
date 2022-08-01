@@ -10,14 +10,10 @@
         pulaLinha();
     }
 
-    var count = 1;
-    while (count <= 10) {
-        var num = 1;
-        while (num <= 10) {
+    for (var count = 1; count <= 10; count++) {
+        for (var num = 1; num <= 10; num++) {
             escreva(count + " x " + num + " = " + (count * num));
-            num++;
         }
-        count++;
     }
     escreva("Final do programa!");
 </script>
