@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h2>Tabuada</h2>
+<script>
+    function pulaLinha() {
+        document.write("<br><hr><br>");
+    }
+
+    function escreva(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var count = 1;
+    while (count <= 10) {
+        var num = 1;
+        while (num <= 10) {
+            escreva(count + " x " + num + " = " + (count * num));
+            num++;
+        }
+        count++;
+    }
+    escreva("Final do programa!");
+</script>
