@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<h3>Desenhando com asteriscos</h3>
+
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+  }
+  function escreva(frase) {
+    document.write(frase);
+  }
+  var n = 30;
+  var row, column = 0;
+  for(row = 1; row <= n; row++){ // linhas
+    for(column = n - row; column >= row; column--){ // espacos nas colunas
+        escreva(" ");
+    }
+    for(column = 1; column <= row; column++){ // asteriscos
+        escreva("*");
+    }
+    pulaLinha();
+  }
+</script>
