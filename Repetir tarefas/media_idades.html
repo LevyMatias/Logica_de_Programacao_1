@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<h2>Media de idades do grupo</h2>
+<script>
+    function pulaLinha() {
+        document.write("<br><hr><br>");
+    }
+
+    function escreva(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function mediaIdade(qntd) {
+        var totalIdades = 0;
+        for (var i = 1; i <= qntd; i++) {
+            var idade = parseInt(prompt("Informe a idade: "));
+            totalIdades += idade;
+        }       
+        var media = totalIdades / qntd;
+        escreva("A media das idades é: " + media);
+    }
+    var qntdPessoas = parseInt(prompt("Informe a quantidade de pessoas do grupo: "));
+    mediaIdade(qntdPessoas);
+</script>
