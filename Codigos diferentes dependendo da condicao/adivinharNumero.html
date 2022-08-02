@@ -2,31 +2,39 @@
 <h3>Descubrir o Número</h3>
 
 <script>
-  var meuPeso = 59;
-  var altura = 1.78;
-
   function pulaLinha() {
     document.write("<br><hr><br>");
   }
   function escreva(frase) {
     document.write(frase);
   }
-  function numeroAleatorio(num){
+  function numeroAleatorio(num) {
+    var tentativaAtual = 1;
+    var tentativas = 3;
     var n = Math.round(Math.random() * num);
-    if(num == n){
+
+    while (tentativaAtual <= tentativas) {
+      var random = prompt("Chute no intervalo do número que voce digitou: ")
+      if (random == n) {
         escreva("Voce acertou o numero!! ");
+        escreva("Era exatamente o " + n);
+        tentativaAtual = tentativas;
         pulaLinha();
-        escreva("Era exatamente o "+ n);
-    }
-    else {
-        escreva("Não acertou! aperte f5 para tentar novamente!");
-        pulaLinha();
-        escreva("O número era: "+ n);
+      } else {
+        if (tentativaAtual == 3) {
+          alert("Número permitido de tentativas ultrapassado!");
+          escreva("O número era: " + n);
+        } else {
+          escreva("Tente novamente!");
+          pulaLinha();
+        }
+      }
+      tentativaAtual++;
     }
   }
   pulaLinha();
-    var random = numeroAleatorio
+  var number = numeroAleatorio
     (
-        prompt("Chute um numero: ")
+      prompt("Digite um numero:")
     );
 </script>
