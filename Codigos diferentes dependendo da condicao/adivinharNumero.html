@@ -9,16 +9,14 @@
     document.write(frase);
   }
   function numeroAleatorio(num) {
-    var tentativaAtual = 1;
-    var tentativas = 3;
     var n = Math.round(Math.random() * num);
 
-    while (tentativaAtual <= tentativas) {
+    for (var tentativaAtual = 1; tentativaAtual <= 3; tentativaAtual++) {
       var random = prompt("Chute no intervalo do número que voce digitou: ")
       if (random == n) {
         escreva("Voce acertou o numero!! ");
         escreva("Era exatamente o " + n);
-        tentativaAtual = tentativas;
+        tentativaAtual = 3;
         pulaLinha();
       } else {
         if (tentativaAtual == 3) {
@@ -29,12 +27,11 @@
           pulaLinha();
         }
       }
-      tentativaAtual++;
     }
   }
-  pulaLinha();
-  var number = numeroAleatorio
-    (
-      prompt("Digite um numero:")
-    );
+    pulaLinha();
+    var number = numeroAleatorio
+      (
+        prompt("Digite um numero:")
+      );
 </script>
