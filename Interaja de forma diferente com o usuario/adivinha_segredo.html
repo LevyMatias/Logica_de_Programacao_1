@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<h2>Chute um número de 0 a 50</h2>
+<input placeholder="Digite um número: ">
+<button>Qual é o número secreto? </button>
+<script>
+    var random = Math.round(Math.random() * 50);
+    var userInput = document.querySelector("input");
+    userInput.focus();
+
+    function userValue(){
+        if(userInput.value == random) {
+            alert("Voce Acertou o Número!! \n\n Parabéns!!!");
+        } else {
+            alert("Errou!!  Tente novamente");
+        }
+        userInput.value = "";
+        userInput.focus();
+    }
+    var button = document.querySelector("button");
+    button.onclick = userValue;
+</script>
