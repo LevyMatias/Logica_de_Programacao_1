@@ -31,6 +31,8 @@
     }
     var secrets = randomNumbers(5);
     var userInput = document.querySelector("input");
+    var chances = 1;
+    
     userInput.focus();
 
     function userValue(){
@@ -44,6 +46,11 @@
         }
         if(take == false) {
             alert("Errou!!  Tente novamente");
+            chances++;
+        } 
+        if(chances == 5){
+            alert("Suas chances acabaram!");
+            document.write("Todos os números secretos dessa seção: " + secrets)
         }
         userInput.value = "";
         userInput.focus();
