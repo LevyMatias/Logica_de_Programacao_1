@@ -1,16 +1,42 @@
 <meta charset="UTF-8">
-<h2>Adivinhar Número</h2>
+<h2>Adivinhar 1 de 5 Números secretos entre 0 a 50</h2>
 <input placeholder="Digite um número: ">
 <button>Qual é o número secreto? </button>
 <script>
-    var secretNumbers = [12, 37, 28];
+    function sortiar(){
+        return Math.round(Math.random() * 50)
+    }
+
+    function randomNumbers(qntd) {
+        var secrets = [];
+        var number = 1; 
+
+        while(number <= qntd) {
+            var numeroAleatorio = sortiar();
+            var encontrou = false;
+
+            for(var j = 0; j < secrets.length; j++) {
+                if(secrets[j] == numeroAleatorio){
+                    encontrou = true;
+                    break;
+                }
+            }
+
+            if(encontrou == false){
+                secrets.push(numeroAleatorio);
+                number++
+            }
+        }
+        return secrets;
+    }
+    var secrets = randomNumbers(5);
     var userInput = document.querySelector("input");
     userInput.focus();
 
     function userValue(){
         var take = false;
-        for(var i = 0; i < secretNumbers.length; i++){
-            if(userInput.value == secretNumbers[i]) {
+        for(var i = 0; i < secrets.length; i++){
+            if(userInput.value == secrets[i]) {
                 alert("Voce Acertou o Número!! \n\n Parabéns!!!");
                 take=true;
                 break;
