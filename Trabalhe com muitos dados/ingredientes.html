@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>Receitas do Yan</h1>
+
+<script>
+    var ingredientes = [];
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));                                                                                                                                                                                                                                              
+    var count = 1;
+
+    while(count <= quantidade) {
+        var ingrediente = prompt("Informe o ingrediente " + count);
+        var existeIngrediente = false;
+
+        for(var i = 0; i < ingredientes.length; i++){
+             if (ingredientes[i] == ingrediente) {
+                alert("Já existe esse ingrediente!");
+                existeIngrediente = true;
+            }
+        }
+
+        if(existeIngrediente == false){
+            ingredientes.push(ingrediente);
+            count++; // incrementa quando o ingrediente nao existir
+        }
+    }
+
+    console.log(ingredientes);
+</script>
